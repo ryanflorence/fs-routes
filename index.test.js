@@ -15,7 +15,7 @@ const assert = (cond, desc) => {
 };
 
 test('generateRoutesFromFiles', () => {
-  const routesDir = path.join('example', 'app', 'routes');
+  const routesDir = path.join('app', 'routes');
   const routes = generateRoutesFromFiles(routesDir);
   assert(Array.isArray(routes), 'routes is an array');
 
