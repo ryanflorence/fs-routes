@@ -20,3 +20,9 @@ export default () => {
     </div>
   )
 }
+
+export function getQuery(params) {
+  return `
+
+  `
+}

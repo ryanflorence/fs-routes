@@ -1,23 +1,23 @@
-const path = require('path');
-const { generateRoutesFromFiles } = require('./index');
+const path = require("path")
+const { generateRoutesFromFiles } = require("./index")
 
 const test = (name, fn) => {
-  console.log(`> ${name}`);
-  fn();
-};
+  console.log(`> ${name}`)
+  fn()
+}
 
 const assert = (cond, desc) => {
   if (cond) {
-    console.log(`✓`, desc);
+    console.log(`✓`, desc)
   } else {
-    console.assert(cond, desc);
+    console.assert(cond, desc)
   }
-};
+}
 
-test('generateRoutesFromFiles', () => {
-  const routesDir = path.join('app', 'routes');
-  const routes = generateRoutesFromFiles(routesDir);
-  assert(Array.isArray(routes), 'routes is an array');
+test("generateRoutesFromFiles", () => {
+  const routesDir = path.join("app", "routes")
+  const routes = generateRoutesFromFiles(routesDir)
+  assert(Array.isArray(routes), "routes is an array")
 
   // const root = routes[0]
   // assert(root.path === '.', 'root path')
@@ -41,8 +41,4 @@ test('generateRoutesFromFiles', () => {
   // const course = courses.children[0]
   // assert(course.path === ':courseId', 'course path')
   // assert(course.component === 'example/app/routes/courses/$courseId.js', 'courses children is array')
-});
-
-
-
-
+})
